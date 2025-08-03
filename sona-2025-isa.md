@@ -1,6 +1,6 @@
 # **CS3 Bonus Activity #1: SONA 2025 !!**
 
-![SONA header](https://stateofthenation.gov.ph/wp-content/uploads/2025/07/sona_banner-2.jpeg)
+![SONA 2025 header](https://stateofthenation.gov.ph/wp-content/uploads/2025/07/sona_banner-2.jpeg)
 
 _**1. Give 2-4 key points from the SONA 2025 that you found interesting.**_
 * **Rice** will only cost **₱20 per kilo** in Kadiwa stores
