@@ -20,4 +20,4 @@ _**3. Write 2 paragraphs of reflection.**_
 _**4. What 1 word/ phrase/ or sentence do you have for the Philippines after hearing SONA 2025?**_
 >**Hopeful.**
 
-^O^
+^v^
