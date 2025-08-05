@@ -1,4 +1,5 @@
-# **CS3 Bonus Activity #1: SONA 2025 !!**
+# **Take on SONA 2025 July 2025 of Pres. Ferdinand R. Marcos Jr.**
+##by **Isabel Sofia M. Buban** of **B2029 Potassium**
 
 ![SONA 2025 header](https://stateofthenation.gov.ph/wp-content/uploads/2025/07/sona_banner-2.jpeg)
 
