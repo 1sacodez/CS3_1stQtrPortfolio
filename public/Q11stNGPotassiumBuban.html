@@ -1,17 +1,18 @@
-<html>
+<!DOCTYPE html>
 <head>
 <body>
 <script>
-    var age = 14 ;
-    var maxAge = 100;
-    var numPerDay = 10;
+    let age = window.prompt("Enter your age: ");
+    let maxAge = window.prompt("Enter your max age: ");
+    let numPerDay = window.prompt("Enter your daily consumption: ");
+    totalRequired = (numPerDay * 365) * (maxAge - age);
 
-    var totalRequired = (numPerDay * 365) * (maxAge - age);
-    
-    document.write("You will need ");
-    document.write(totalRequired);
-    document.write(" cookies to last you until the ripe old age of ");
-    document.write(maxAge);
+    if (confirm("You sure?")){
+        alert("You will need " + totalRequired + " snacks to last you until the ripe old age of " + maxAge + ".");
+    }
+    else{
+        alert("Run the code again.")
+    }
 
 </script>
 </body>
