@@ -2,22 +2,19 @@
 <head>
 <body>
 <script>
-    let age = prompt("Please enter your age: ");
-    let maxAge = prompt("Enter your max age: ");
-    let numPerDay = prompt("Enter your daily consumption: ");
+    let age = prompt("Please enter your age: ", "14");
+    let maxAge = prompt("Enter your max age: ", "99");
+    let numPerDay = prompt("Enter your daily consumption: ", "10");
 
     var totalRequired = (numPerDay * 365) * (maxAge - age);
 
-    if (confirm("You sure?")){
-        alert("You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".")
+    let text = "You sure?";
+    if (confirm(text) == true){
+        text = "You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".";
     }
     else{
-        alert("Run the code again.")
+        text = "Run the code again.";
     }
-
-
-
-
 
 </script>
 </body>
