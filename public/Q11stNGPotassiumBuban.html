@@ -2,25 +2,22 @@
 <head>
 <body>
 <script>
-    let age = window.prompt("Enter your age: ");
-    let maxAge = window.prompt("Enter your max age: ");
-    let numPerDay = window.prompt("Enter your daily consumption: ");
-<<<<<<< HEAD
-    totalRequired = (numPerDay * 365) * (maxAge - age);
+    let age = prompt("Please enter your age: ");
+    let maxAge = prompt("Enter your max age: ");
+    let numPerDay = prompt("Enter your daily consumption: ");
+
+    var totalRequired = (numPerDay * 365) * (maxAge - age);
 
     if (confirm("You sure?")){
-        alert("You will need " + totalRequired + " snacks to last you until the ripe old age of " + maxAge + ".");
+        alert("You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".")
     }
     else{
         alert("Run the code again.")
-=======
-    if (confirm("You sure?")){
-        console.log("Your Age = " + Age + "Your Max Age = " + maxAge + "Your Daily Consumption =" + numPerDay)
     }
-    else{
-        console.log("Run the code again.")
->>>>>>> a4884a58767b9b749a5240d9d1bdd33043eb2f0a
-    }
+
+
+
+
 
 </script>
 </body>
