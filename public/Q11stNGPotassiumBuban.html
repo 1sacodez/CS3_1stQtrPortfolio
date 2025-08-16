@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <head>
 <body>
+
+    <h1>Isa's First Non-Graded Exercise in 1st Quarter !</h1>
+    <p>Click the button below to start!</p>>
+    <button onclick = "myFunction()">Try it!</button>
+
+
 <script>
-    let age = prompt("Please enter your age: ", "14");
-    let maxAge = prompt("Enter your max age: ", "99");
-    let numPerDay = prompt("Enter your daily consumption: ", "10");
+    function myFunction(){
+        let age = prompt("Please enter your age: ", "14");
+        let maxAge = prompt("Enter your max age: ", "99");
+        let numPerDay = prompt("Enter your daily consumption: ", "10");
 
-    var totalRequired = (numPerDay * 365) * (maxAge - age);
+        var totalRequired = (numPerDay * 365) * (maxAge - age);
 
-    let text = "You sure?";
-    if (confirm(text) == true){
-        text = "You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".";
-    }
-    else{
-        text = "Run the code again.";
+        let text = "You sure?";
+        if (confirm(text) == true){
+            text = "You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".";
+        }
+        else{
+            text = "Run the code again.";
+        }
     }
 
 </script>
