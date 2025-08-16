@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<head>
-<body>
+<html>
+<style>
+    div{
+        background-color: whitesmoke;
+        width: 1000px;
+        padding: 30px;
+        margin: 20px;
+    }
+    span{
+        font-family:"verdana";
+        background-color:pink;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 2px 6px;
+        color: #b66794;
 
-    <h1>Isa's First Non-Graded Exercise in 1st Quarter !</h1>
+    }
+
+</style>
+<body style="background-color:rgb(76, 105, 158)">
+    <h1><span>1st Non-Graded Exercise</h1></span>
+    <div>
     <p>Click the button below to start!</p>>
     <button onclick = "myFunction()">Try it!</button>
 
+    <p id="output"></p>
 
+    </div>
 <script>
     function myFunction(){
         let age = prompt("Please enter your age: ", "14");
@@ -15,12 +35,12 @@
 
         var totalRequired = (numPerDay * 365) * (maxAge - age);
 
-        let text = "You sure?";
-        if (confirm(text) == true){
-            text = "You will need " + totalRequired + "snacks to last you until the ripe old age of " + age + ".";
+        let text = confirm("You sure?");
+        if (text){
+            document.getElementById("output").textContent="You will need " + totalRequired + " snacks to last you until the ripe age of " + maxAge + ".";
         }
         else{
-            text = "Run the code again.";
+            document.getElementById("output").textContent = "Run the code again.";
         }
     }
 
