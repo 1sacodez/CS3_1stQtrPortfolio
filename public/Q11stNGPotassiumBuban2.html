@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 1st Graded Exercise (Ver. 2) submitted by Isa Buban of 9-Potassium!</h2>
+
+    <div>
+        Enter your age: <input id = "inp_age"><br>
+        Enter your Max age: <input id = "inp_ma"><br>
+        Enter number of snacks: <input id = "inp_nos"><br><br>
+        <button id = btn_submit>Accept Input</button><br>
+        <p>Result: <span id = "demo"></span></div></p>
+    </div>
+
+    <script type="text/javascript">
+        const btn = document.getElementById("btn_submit");
+        const age = document.getElementById("inp_age");
+        const ma = document.getElementById("inp_ma");
+        const nos = document.getElementById("inp_nos");
+
+        btn.addEventListener('click', totalMeal);
+        function totalMeal(){
+            const currentAge = parseFloat(age.value) || 0;
+            const maxAge = parseFloat(ma.value) || 0;
+            const numPerDay = parseFloat(nos.value) || 0;
+
+            const totalRequired = (numPerDay * 365) * (maxAge - currentAge);
+        
+            document.getElementById("demo").innerHTML = "You will need " + totalRequired + " to last you until the ripe old age of " + maxAge + ".";
+        }
+    </script>
+
+</body>
+</html>
