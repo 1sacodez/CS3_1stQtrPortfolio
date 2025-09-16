@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  h1{
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+  }
+    body{
+      background-image:url(https://img.freepik.com/premium-vector/pastel-pink-ribbon-heart-white-background-wallpaper-gift-wrap-banner-template-notepad_884113-176.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+    }
+  </style>
+  
+  
+  
+  <h1>Guess My Word >:3</h1>
+  <p id="wordDisplay"></p>
+  <input type="text" id="guessInput" maxlength="1">
+  <button onclick="makeGuess()">Guess</button>
+  <p id="message"></p>
+  
+  <script>
+    let secretWord = ["I", "m", "a", "g", "i", "n", "a", "t", "i", "v", "e"];
+    let guessedWord = ["", "", "", "", "", "", "", "", "", "", "_"];
+  
+    document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+  
+    function makeGuess() {
+      let guess = document.getElementById("guessInput").value.toLowerCase();
+      let correct = false;
+  
+      for (let i = 0; i < secretWord.length; i++) {
+        if (secretWord[i] === guess) {
+          guessedWord[i] = guess;
+          correct = true;
+        }
+      }
+  
+      document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+      document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
+      document.getElementById("guessInput").value = "";
+    }
+  </script>
+
+</html>
