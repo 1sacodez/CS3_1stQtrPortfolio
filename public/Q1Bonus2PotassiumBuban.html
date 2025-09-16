@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  h1{
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+  }
+    body{
+      background-image:url(https://img.freepik.com/premium-vector/pastel-pink-ribbon-heart-white-background-wallpaper-gift-wrap-banner-template-notepad_884113-176.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+    }
+  </style>
+  
+  
+  
+  <h1>Guess My Word >:3</h1>
+  <p id="wordDisplay"></p>
+  <input type="text" id="guessInput" maxlength="1">
+  <button onclick="makeGuess()">Guess</button>
+  <p id="message"></p>
+  <p id="attempts"></p>
+  
+  <script>
+    let secretWord = ["i", "m", "a", "g", "i", "n", "a", "t", "i", "v", "e", " ", "i", "s", "a"];
+    let guessedWord = secretWord.map(char => char === " " ? " " : "_");
+    let attemptsLeft = 5;
+
+  document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+  document.getElementById("attempts").textContent = "Attempts left: " + attemptsLeft;
+  
+    document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+  
+    function makeGuess() {
+      let guess = document.getElementById("guessInput").value.toLowerCase();
+      let correct = false;
+
+      if (guess.length !== 1 || !/[a-z]/.test(guess)) {
+      document.getElementById("message").textContent = "Please enter a single letter.";
+      document.getElementById("guessInput").value = "";
+      return;
+    }
+      
+      for (let i = 0; i < secretWord.length; i++) {
+        if (secretWord[i] === guess) {
+          guessedWord[i] = guess;
+          correct = true;
+        }
+      }
+
+      if (!correct) {
+      attemptsLeft--;
+      }
+
+      document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+      document.getElementById("attempts").textContent = "Attempts left: " + attemptsLeft;
+
+      if (guessedWord.join("") === secretWord.join("")) {
+        document.getElementById("message").textContent = "yippee, you got it: imaginative isa !";
+        document.getElementById("guessInput").disabled = true;
+      }
+      else if (attemptsLeft <= 0) {
+        document.getElementById("message").textContent = "oof... the words were: imaginative isa !";
+        document.getElementById("guessInput").disabled = true;
+      }
+      else {
+      document.getElementById("message").textContent = correct ? "correct! ✅ continue..." : "nope! ❌ try again! ";
+      }
+      
+      document.getElementById("guessInput").value = "";
+    }
+  </script>
+
+</html>
